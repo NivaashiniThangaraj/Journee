@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Weekly Journal</title>
+  <link rel="stylesheet" href="weekly.css" />
+</head>
+<body>
+  <!-- Header Section -->
+  <header>
+    <h1>Weekly Journal - Write Your Story</h1>
+    <p>Drag stickers, upload photos, or speak your thoughts into the journal.</p>
+  </header>
+
+  <!-- Main UI Divisions -->
+  <div class="container">
+    <!-- Sidebars -->
+    <div class="sidebar">
+      <h3>Select Canvas Theme</h3>
+      <div class="canvas-options">
+        <div class="theme-option" onclick="changeCanvas('theme1')">Theme 1</div>
+        <div class="theme-option" onclick="changeCanvas('theme2')">Theme 2</div>
+        <div class="theme-option" onclick="changeCanvas('theme3')">Theme 3</div>
+      </div>
+
+      <h3>Select Stickers</h3>
+      <div class="sticker-options">
+        <img src="images/sticker1.png" class="sticker" onclick="addSticker(event)" />
+        <img src="images/sticker2.png" class="sticker" onclick="addSticker(event)" />
+        <img src="images/sticker3.png" class="sticker" onclick="addSticker(event)" />
+      </div>
+
+      <h3>Font Styles</h3>
+      <select id="fontSelector" onchange="changeFontStyle()">
+        <option value="Arial">Arial</option>
+        <option value="'Times New Roman'">Times New Roman</option>
+        <option value="'Courier New'">Courier New</option>
+        <option value="'Comic Sans MS'">Comic Sans MS</option>
+      </select>
+    </div>
+
+    <!-- Main Journal Canvas Area -->
+    <div class="canvas-container">
+      <div class="canvas" id="journalCanvas"></div>
+    </div>
+  </div>
+
+  <!-- Voice Recording -->
+  <div class="controls">
+    <button onclick="startRecording()">Start Recording</button>
+  </div>
+  <div id="journalCanvas" style="width: 100%; height: 500px; border: 1px solid #ccc; position: relative;"></div>
+
+<!-- Add sticker images -->
+<div style="margin-top: 10px;">
+  <img src="sticker1.png" onclick="addSticker(event)" style="width: 50px; cursor: pointer;">
+  <img src="sticker2.png" onclick="addSticker(event)" style="width: 50px; cursor: pointer;">
+</div>
+
+  <script src="weekly.js"></script>
+  
+</body>
+</html>

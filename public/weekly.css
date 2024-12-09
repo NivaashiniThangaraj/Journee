@@ -1,0 +1,133 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #eceff1, #d9e2ec);
+    color: #333;
+  }
+  
+  /* Header */
+  header {
+    text-align: center;
+    padding: 15px;
+    background: #f4c2c2;
+    color: #555;
+  }
+  
+  /* Main Container */
+  .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 20px;
+  }
+  
+  /* Sidebar */
+  .sidebar {
+    width: 25%;
+    background: #fdfbfb;
+    border: 1px solid #aaa;
+    padding: 10px;
+  }
+  
+  .sidebar h3 {
+    text-align: center;
+  }
+  
+  .canvas-options .theme-option,
+  .sticker-options .sticker {
+    cursor: pointer;
+    margin: 5px;
+  }
+  
+  .theme-option {
+    background: lightblue;
+    padding: 5px;
+    text-align: center;
+    border-radius: 5px;
+  }
+  
+  .sticker {
+    height: 40px;
+    width: 40px;
+  }
+  
+  /* Canvas Area */
+  .canvas-container {
+    width: 70%;
+    height: 500px;
+    border: 1px solid #333;
+    background: #ffffff;
+    position: relative;
+  }
+  
+  .canvas {
+    height: 100%;
+    width: 100%;
+    background: url('./images/theme1.png') no-repeat center center;
+    background-size: cover;
+  }
+  
+  /* Controls */
+  .controls {
+    text-align: center;
+    margin: 10px 0;
+  }
+  
+  button {
+    padding: 10px 20px;
+    cursor: pointer;
+    background: #5b6ea0;
+    border: none;
+    color: #fff;
+    border-radius: 5px;
+  }
+  .sticker-container {
+    position: relative; /* Ensure buttons are within the context of their parent */
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    transition: transform 0.2s ease;
+  }
+  
+  /* Cross button - delete */
+  .delete-btn {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    width: 20px;
+    height: 20px;
+    background-color: #ff0000;
+    color: white;
+    text-align: center;
+    line-height: 20px;
+    border-radius: 50%;
+    font-size: 12px;
+    cursor: pointer;
+    display: none;
+  }
+  
+  /* Resize handle */
+  .resize-handle {
+    position: absolute;
+    bottom: -5px;
+    right: -5px;
+    width: 15px;
+    height: 15px;
+    background: #007bff;
+    border-radius: 50%;
+    display: none;
+    cursor: nwse-resize;
+  }
+  
+  /* Only show buttons when hovered */
+  .sticker-container:hover .resize-handle,
+  .sticker-container:hover .delete-btn {
+    display: block;
+  }
+  
