@@ -1,1 +1,2 @@
-![Homepage](https://github.com/user-attachments/assets/0173b643-1bb7-4c25-ab07-d827979a3833)
+Take a look at the homepage of Journee:
+![Homepage](https://github.com/user-attachments/assets/26b83c6d-a957-4448-acad-6c677a4c65ba)
